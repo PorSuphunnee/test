@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Http;
 class ListDetail extends Controller
 {
     //
-    function list(){
-        $data = Http::get('https://api.spacexdata.com/v4/crew')->json();
+    function list(Request $request){
+        $data = Http::get('https://api.spacexdata.com/v4/launches')->json();
 
         return view('ListDetail',['data'=>$data]);
     }

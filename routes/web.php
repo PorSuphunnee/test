@@ -20,6 +20,12 @@ Route::get('/', function () {
 });
 
 Route::get('/list', [ListDetail::class, 'list']);
+
+Route::get('all', ['as' => 'all-launches', 'uses' => 'ListDetail@list'
+    //
+]);
+
+
 // Route::get('/list', [ListDetail::class, 'rockets']);
 // Route::get('/list', [ListDetail::class, 'launches']);
 // Route::get('/list', [ListDetail::class, 'capsules']);
